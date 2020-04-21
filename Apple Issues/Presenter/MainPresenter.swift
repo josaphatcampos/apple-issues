@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+//import UIKit
 
 class MainPresenter {
     
@@ -18,7 +18,6 @@ class MainPresenter {
     }
     
     func getIssues(page:String = "1", service: AdapterService){
-        
         mainView?.showLoading()
         mainView?.isReady = false
         
@@ -44,5 +43,7 @@ class MainPresenter {
             }
         }
     }
+    
+    
     
 }

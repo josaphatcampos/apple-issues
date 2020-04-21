@@ -14,7 +14,6 @@ protocol MainViewProtocol:AnyObject {
     func hideLoading()
     func set(_ issues: [IssueModel])
     func appendData(_ issues: [IssueModel])
-    func showEmptyView()
     func showAlert(title:String, message:String)
 }
 
@@ -42,8 +41,14 @@ class MainViewController: UIViewController {
         mainPresenter.setView(self)
         mainPresenter.getIssues(service: service)
     }
-
-
+    
+    func goToIssue(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let issueViewController = storyBoard.instantiateViewController(withIdentifier: "Issue") as! IssueViewController
+        //        self.present(newViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(issueViewController, animated: true)
+        
+    }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
@@ -68,6 +73,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.goToIssue()
+    }
+    
 }
 
 extension MainViewController: MainViewProtocol{
@@ -85,10 +94,6 @@ extension MainViewController: MainViewProtocol{
     
     func appendData(_ issues: [IssueModel]){
         dataSource.append(contentsOf: issues)
-    }
-    
-    func showEmptyView() {
-        
     }
     
     func showAlert(title:String, message:String){

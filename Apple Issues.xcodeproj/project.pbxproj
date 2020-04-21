@@ -23,6 +23,8 @@
 		4D357687244E9718003B6D75 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D357686244E9718003B6D75 /* MainTableViewCell.swift */; };
 		4D357689244E9785003B6D75 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D357688244E9785003B6D75 /* MainPresenter.swift */; };
 		4D35768F244E9B6A003B6D75 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35768E244E9B6A003B6D75 /* ExtensionHelpers.swift */; };
+		4DF6C1A8244F9725005DEE4D /* UtilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1A7244F9725005DEE4D /* UtilityHelper.swift */; };
+		4DF6C1AA244FA21A005DEE4D /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1A9244FA21A005DEE4D /* IssueViewController.swift */; };
 		F642FD3D748460A477F37D0E /* Pods_Apple_IssuesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA16EF60932AF3556EC449 /* Pods_Apple_IssuesTests.framework */; };
 		FA3F4C0359FD7393F23EE6B5 /* Pods_Apple_Issues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C8A5D67820FF6A9A4E7071 /* Pods_Apple_Issues.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		4D357686244E9718003B6D75 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		4D357688244E9785003B6D75 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		4D35768E244E9B6A003B6D75 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		4DF6C1A7244F9725005DEE4D /* UtilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityHelper.swift; sourceTree = "<group>"; };
+		4DF6C1A9244FA21A005DEE4D /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
 		72F224E60BE83D0FE70E01E4 /* Pods-Apple IssuesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple IssuesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1FA16EF60932AF3556EC449 /* Pods_Apple_IssuesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apple_IssuesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6EADCAEA73215A886600E9 /* Pods-Apple IssuesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple IssuesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			children = (
 				4D357685244E96FC003B6D75 /* Cells */,
 				4D357655244E7FB1003B6D75 /* MainViewController.swift */,
+				4DF6C1A9244FA21A005DEE4D /* IssueViewController.swift */,
 				4D357657244E7FB1003B6D75 /* Main.storyboard */,
 			);
 			path = View;
@@ -215,6 +220,7 @@
 			children = (
 				4D35767E244E8DC3003B6D75 /* Components */,
 				4D35768E244E9B6A003B6D75 /* ExtensionHelpers.swift */,
+				4DF6C1A7244F9725005DEE4D /* UtilityHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -395,9 +401,11 @@
 				4D357684244E9446003B6D75 /* HttpError.swift in Sources */,
 				4D35767B244E82E7003B6D75 /* Model.swift in Sources */,
 				4D357656244E7FB1003B6D75 /* MainViewController.swift in Sources */,
+				4DF6C1AA244FA21A005DEE4D /* IssueViewController.swift in Sources */,
 				4D357687244E9718003B6D75 /* MainTableViewCell.swift in Sources */,
 				4D35767D244E85E2003B6D75 /* UserModel.swift in Sources */,
 				4D357679244E82C1003B6D75 /* IssueModel.swift in Sources */,
+				4DF6C1A8244F9725005DEE4D /* UtilityHelper.swift in Sources */,
 				4D357680244E8DF2003B6D75 /* UIViewController-Alert.swift in Sources */,
 				4D357689244E9785003B6D75 /* MainPresenter.swift in Sources */,
 				4D35768F244E9B6A003B6D75 /* ExtensionHelpers.swift in Sources */,
