@@ -7,24 +7,55 @@
 //
 
 import UIKit
+import Kingfisher
+
+protocol IssueProtocol:AnyObject {
+    func setAvatar(avatar:String)
+    func setTitle(title:String)
+    func setDate(date:String)
+    func setBody(body:String)
+}
 
 class IssueViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    var presenter: IssuePresenter?
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var bodyTextView: UITextView!
+    
+    @IBAction func goToUrlIssueButton(_ sender: Any) {
+        presenter?.issueVisiteUrl()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        presenter?.setView(self)
+        
+        presenter?.viewConfigure()
     }
-    */
+}
 
+extension IssueViewController: IssueProtocol{
+    func setAvatar(avatar:String) {
+        self.avatarImageView.kf.indicatorType = .activity
+        self.avatarImageView.kf.setImage(with: URL(string: avatar), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+    }
+    
+    func setTitle(title:String) {
+         self.titleLabel.text = title
+    }
+    
+    func setDate(date:String) {
+         self.dateLabel.text = date
+    }
+    
+    func setBody(body:String) {
+        self.bodyTextView.text = body
+    }
+    
+    
 }

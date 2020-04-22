@@ -12,6 +12,18 @@ import Foundation
 class MainPresenter {
     
     weak fileprivate var mainView: MainViewProtocol?
+    private var mainRouter:MainRouter?
+    
+    var dataSource = [IssueModel](){
+        didSet{
+            mainView?.reloadData()
+        }
+    }
+    
+    func goToIssue(index:Int){
+        mainRouter = MainRouter(view: mainView as! MainViewController)
+        mainRouter?.toIssue(issue: dataSource[index])
+    }
     
     func setView(_ mainView:MainViewProtocol){
         self.mainView = mainView
@@ -29,11 +41,7 @@ class MainPresenter {
                     if data == nil {
                         self!.mainView?.showAlert(title: "Atenção", message: "Não existem mais dados para carregar!")
                     }else{
-                        if(page != "1"){
-                            self?.mainView?.appendData((data?.toModel())!)
-                        }else{
-                            self?.mainView?.set((data?.toModel())!)
-                        }
+                        self?.appendData((data?.toModel())!)
                         self!.mainView?.isReady = true
                     }
                     self!.mainView?.hideLoading()
@@ -43,7 +51,10 @@ class MainPresenter {
             }
         }
     }
-    
+        
+    private func appendData(_ issues: [IssueModel]){
+        dataSource.append(contentsOf: issues)
+    }
     
     
 }

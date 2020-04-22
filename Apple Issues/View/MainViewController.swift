@@ -12,8 +12,7 @@ protocol MainViewProtocol:AnyObject {
     var isReady:Bool {get set}
     func showLoading()
     func hideLoading()
-    func set(_ issues: [IssueModel])
-    func appendData(_ issues: [IssueModel])
+    func reloadData()
     func showAlert(title:String, message:String)
 }
 
@@ -24,57 +23,43 @@ class MainViewController: UIViewController {
     
     fileprivate let service = AdapterService()
     fileprivate let mainPresenter = MainPresenter()
-    fileprivate var dataSource = [IssueModel](){
-        didSet{
-            if let tableView = tableView {
-                tableView.reloadData()
-            }
-        }
-    }
-    fileprivate var page = 1
+    private var page = 1
     var isReady = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         mainPresenter.setView(self)
         mainPresenter.getIssues(service: service)
     }
     
-    func goToIssue(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let issueViewController = storyBoard.instantiateViewController(withIdentifier: "Issue") as! IssueViewController
-        //        self.present(newViewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(issueViewController, animated: true)
-        
-    }
+    
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return mainPresenter.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell
         
-        cell.title?.text = dataSource[indexPath.row].title
-        cell.state?.text =  dataSource[indexPath.row].state
-        cell.state?.textColor = .systemGreen
+        cell.title?.text = mainPresenter.dataSource[indexPath.row].title
+        cell.state?.text =  mainPresenter.dataSource[indexPath.row].state
+        cell.state?.textColor = mainPresenter.dataSource[indexPath.row].state == "open" ? .systemGreen : .red
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == dataSource.count - 1 && isReady{
+        if indexPath.row == mainPresenter.dataSource.count - 1 && isReady{
             page += 1
             mainPresenter.getIssues(page: "\(page)", service: service)
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.goToIssue()
+        mainPresenter.goToIssue(index: indexPath.row)
     }
     
 }
@@ -88,12 +73,8 @@ extension MainViewController: MainViewProtocol{
         self.indicator.stopAnimating()
     }
     
-    func set(_ issues: [IssueModel]) {
-        dataSource = issues
-    }
-    
-    func appendData(_ issues: [IssueModel]){
-        dataSource.append(contentsOf: issues)
+    func reloadData(){
+        tableView.reloadData()
     }
     
     func showAlert(title:String, message:String){

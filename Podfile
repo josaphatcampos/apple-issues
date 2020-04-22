@@ -7,6 +7,7 @@ target 'Apple Issues' do
 
   # Pods for Apple Issues
   pod 'Alamofire', '~> 5.0'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'Apple IssuesTests' do
     inherit! :search_paths

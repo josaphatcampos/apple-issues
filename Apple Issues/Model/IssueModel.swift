@@ -24,7 +24,7 @@ struct IssueModel: Model{
 
 extension IssueModel{
     func getCreateStringDate() -> String{
-        if !(self.created_at.isEmpty || self.created_at == nil){
+        if !(self.created_at.isEmpty){
             return UtilityHelper.convertDateToString(self.created_at, formatFrom: "yyyy-MM-dd'T'HH:mm:ssZ", formatTo: "dd/MM/yyyy")
         }
         
