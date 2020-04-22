@@ -13,7 +13,6 @@
 		4D357659244E7FB1003B6D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D357657244E7FB1003B6D75 /* Main.storyboard */; };
 		4D35765B244E7FB5003B6D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D35765A244E7FB5003B6D75 /* Assets.xcassets */; };
 		4D35765E244E7FB5003B6D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D35765C244E7FB5003B6D75 /* LaunchScreen.storyboard */; };
-		4D357669244E7FB5003B6D75 /* Apple_IssuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D357668244E7FB5003B6D75 /* Apple_IssuesTests.swift */; };
 		4D357679244E82C1003B6D75 /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D357678244E82C1003B6D75 /* IssueModel.swift */; };
 		4D35767B244E82E7003B6D75 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35767A244E82E7003B6D75 /* Model.swift */; };
 		4D35767D244E85E2003B6D75 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35767C244E85E2003B6D75 /* UserModel.swift */; };
@@ -28,6 +27,10 @@
 		4DF6C1AF244FB58C005DEE4D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1AE244FB58C005DEE4D /* MainRouter.swift */; };
 		4DF6C1B1244FB84C005DEE4D /* IssuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1B0244FB84C005DEE4D /* IssuePresenter.swift */; };
 		4DF6C1B3244FC49F005DEE4D /* IssueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1B2244FC49F005DEE4D /* IssueRouter.swift */; };
+		4DF6C1B52450017D005DEE4D /* AppleIssuesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1B42450017D005DEE4D /* AppleIssuesSpec.swift */; };
+		4DF6C1B7245001FB005DEE4D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF6C1B6245001FB005DEE4D /* Quick.framework */; };
+		4DF6C1B92450021F005DEE4D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF6C1B82450021F005DEE4D /* Nimble.framework */; };
+		4DF6C1BB24501EE6005DEE4D /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6C1BA24501EE6005DEE4D /* TestFactory.swift */; };
 		F642FD3D748460A477F37D0E /* Pods_Apple_IssuesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA16EF60932AF3556EC449 /* Pods_Apple_IssuesTests.framework */; };
 		FA3F4C0359FD7393F23EE6B5 /* Pods_Apple_Issues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C8A5D67820FF6A9A4E7071 /* Pods_Apple_Issues.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +58,6 @@
 		4D35765D244E7FB5003B6D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D35765F244E7FB5003B6D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D357664244E7FB5003B6D75 /* Apple IssuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple IssuesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D357668244E7FB5003B6D75 /* Apple_IssuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_IssuesTests.swift; sourceTree = "<group>"; };
 		4D35766A244E7FB5003B6D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D357678244E82C1003B6D75 /* IssueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
 		4D35767A244E82E7003B6D75 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -71,6 +73,10 @@
 		4DF6C1AE244FB58C005DEE4D /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		4DF6C1B0244FB84C005DEE4D /* IssuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenter.swift; sourceTree = "<group>"; };
 		4DF6C1B2244FC49F005DEE4D /* IssueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRouter.swift; sourceTree = "<group>"; };
+		4DF6C1B42450017D005DEE4D /* AppleIssuesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIssuesSpec.swift; sourceTree = "<group>"; };
+		4DF6C1B6245001FB005DEE4D /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF6C1B82450021F005DEE4D /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF6C1BA24501EE6005DEE4D /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
 		72F224E60BE83D0FE70E01E4 /* Pods-Apple IssuesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple IssuesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1FA16EF60932AF3556EC449 /* Pods_Apple_IssuesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apple_IssuesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6EADCAEA73215A886600E9 /* Pods-Apple IssuesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple IssuesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F642FD3D748460A477F37D0E /* Pods_Apple_IssuesTests.framework in Frameworks */,
+				4DF6C1B7245001FB005DEE4D /* Quick.framework in Frameworks */,
+				4DF6C1B92450021F005DEE4D /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,8 @@
 		1DB8A998DA1369896545230B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DF6C1B82450021F005DEE4D /* Nimble.framework */,
+				4DF6C1B6245001FB005DEE4D /* Quick.framework */,
 				10C8A5D67820FF6A9A4E7071 /* Pods_Apple_Issues.framework */,
 				F1FA16EF60932AF3556EC449 /* Pods_Apple_IssuesTests.framework */,
 			);
@@ -145,8 +155,9 @@
 		4D357667244E7FB5003B6D75 /* Apple IssuesTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D357668244E7FB5003B6D75 /* Apple_IssuesTests.swift */,
 				4D35766A244E7FB5003B6D75 /* Info.plist */,
+				4DF6C1B42450017D005DEE4D /* AppleIssuesSpec.swift */,
+				4DF6C1BA24501EE6005DEE4D /* TestFactory.swift */,
 			);
 			path = "Apple IssuesTests";
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 				4D357660244E7FB5003B6D75 /* Sources */,
 				4D357661244E7FB5003B6D75 /* Frameworks */,
 				4D357662244E7FB5003B6D75 /* Resources */,
+				78D553D26429981B877ACCEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,6 +403,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78D553D26429981B877ACCEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Apple IssuesTests/Pods-Apple IssuesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94D79C16A893C83DDC5C9220 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,7 +472,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D357669244E7FB5003B6D75 /* Apple_IssuesTests.swift in Sources */,
+				4DF6C1BB24501EE6005DEE4D /* TestFactory.swift in Sources */,
+				4DF6C1B52450017D005DEE4D /* AppleIssuesSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
