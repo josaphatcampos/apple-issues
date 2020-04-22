@@ -19,6 +19,7 @@ Projeto em **Swift** com arquitetura **MVP**.
  - Consulta em API - **Alamofire**
  - Exibir imagens através de suas URLs com loading - **Kingfisher**
  - Paginação Infinita - *(Infinite Scroll)*
+ - UnityTests com Quick/Nimble
 
 ## Instalando o CocoaPods
 
