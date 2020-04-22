@@ -82,13 +82,8 @@ class AppleIssuesSpec: QuickSpec {
 
 class UrlProtocolStub: URLProtocol{
     
-//    static var emit: ((URLRequest)-> Void)?
     static var data: Data?
     static var error:HttpError?
-    
-//    static func observeRequest(completion: @escaping (URLRequest) -> Void){
-//        UrlProtocolStub.emit = completion
-//    }
     
     static func simulate(data:Data?, error: HttpError?){
         UrlProtocolStub.data = data
@@ -102,7 +97,6 @@ class UrlProtocolStub: URLProtocol{
         return request
     }
     override func startLoading() {
-//        UrlProtocolStub.emit?(request)
         if let data = UrlProtocolStub.data{
             client?.urlProtocol(self, didLoad: data)
         }
