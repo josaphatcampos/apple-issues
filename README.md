@@ -3,7 +3,7 @@
 Projeto em **Swift** com arquitetura **MVP**.
 
 ## Detalhamento
-#### Uma tela com a lista de issues do repositório (https://api.github.com/repos/apple/swift/issues).Com os seguintes elementos:
+#### Uma tela com a lista de issues do repositório (https://api.github.com/repos/apple/swift/issues) . Com os seguintes elementos:
 - Título do issue
 - Estado do issue (ABERTO, FECHADO)
 
